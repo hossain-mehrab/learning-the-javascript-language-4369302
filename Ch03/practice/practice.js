@@ -1,7 +1,7 @@
 let testObject = {
   key1 : "Mango",
   key2 : "Banana"
-};
+}; 
 console.log(testObject);
 console.log(Object.keys(testObject).length); //Find Object keys Length
 console.log(Object.keys(testObject.key1).length); //Find Object Child keys Length
@@ -61,5 +61,53 @@ console.log(animal4 = {...animal1});
 
 //Deep Copy
 console.log(animal5 = JSON.parse(JSON.stringify(animal1)));
+
+//Array: Kind of objects but without key, have just values
+let myArray1 = ["Two", 5, 9, "Mango"];
+console.log(myArray1)
+console.log(myArray1.length)
+
+let myList = [12, {keyA : "Home", kayB : "Tree", KeyC: 12}, "baba"];
+console.log(myList)
+
+//Manipulating arrays
+let myList1 = ["A", "B", "C", "D"]
+console.log(myList1)
+console.log(myList1[(myList1.length)-1]);
+console.log(myList1[(myList1.length)] ="Summer");
+console.log(myList1);
+console.log(myList1.push("Orange")); //push method to add new values 
+console.log(myList1);
+console.log(myList1.pop()); //pop method to delete some values
+console.log(myList1);
+console.log(delete myList1[0]);
+console.log(myList1);
+console.log(myList1.splice(0,1));
+console.log(myList1);
+
+//Regular expression
+var string1 = "This is the longest string ever.";
+var string2 = "This is the shortest string ever.";
+var string3 = "Is this the thing called Mount Everest?";
+var string4 = "This is the Sherman on the Mount.";
+
+var regex = /this/;
+
+regex.test(string1);
+regex.test(string2);
+regex.test(string3);
+regex.test(string4);
+
+regex = /this/i;
+
+regex = /^this/i;
+
+regex = /this$/i;
+
+regex = /ever.$/i;
+
+regex = /ever\.$/i;
+
+
 
 
