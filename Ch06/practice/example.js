@@ -226,6 +226,71 @@ isEven = num => num % 2 === 0;
 
 
 //Three dots (...) in Js Functions
+function addingMachine(...terms) {
+  // initialize the total we'll be returning
+  var total = 0;
 
+  // this used to be `arguments` instead of `terms`
+  for (var i = 0; i < terms.length; i += 1) {
+    // grab the next number
+    var number = terms[i];
+
+    // check if the argument is a number.
+    // if so, add it to the running total
+    if (typeof number === "number") {
+      total += number;
+    }
+  }
+
+  // done - return the total
+  return total;
+}
+
+function bake(temp = 350, time = 35, ...flavors) {
+  console.log(`Let's bake this cake at ${temp} degrees,`);
+  console.log(`for ${time} minutes\n`);
+  
+  if (flavors.length > 0) {
+    console.log("And let's not forget these flavors", flavors);
+  }
+  
+  console.log("Arguments contains everything", arguments);
+}
+
+bake(425, 30, 'chocolate', 'lemon', 'black forest');
+bake(300, 30, 'vanilla');
+bake();
+
+
+//Callback functions and looping 
+// function double1 (number1){
+//   return (number1*2);
+// }
+
+// let myNumber1 = [1,2,3,4,5];
+// let myDouble1 = myNumber1.map(double1);
+
+
+function doubleIt(number) {
+  return (number *= 2);
+}
+
+var myNumbers = [1, 2, 3, 4, 5];
+
+var myDoubles = myNumbers.map(doubleIt);
+
+myNumbers.forEach(function (number) {
+  console.log("My array contains", number);
+});
+
+myNumbers.forEach((number) => {
+  console.log("My array contains", number);
+});
+
+// this is a browser-based example
+const myTextField = document.getElementById("myTextField");
+myTextField.addEventListener("keyup", () => {
+  console.log("Someone is typing!");
+});
 
 
