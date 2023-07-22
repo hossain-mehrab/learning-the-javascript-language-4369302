@@ -39,7 +39,7 @@ function transmogrifier(calvin) {
 }
 
 // this version of the transmogifier does return a copy, leaving the original alone
-function transmogrifyCopy1(calvin) {
+function transmogrifyCopy(calvin) {
   if (typeof calvin !== "object") {
     console.error("Calvin is not an object.");
     return;
