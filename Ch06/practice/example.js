@@ -194,3 +194,38 @@ if (1 === 1) {
 console.log('One is still one, right?', oneIsOne); // ReferenceError
 
 //Arrow Functions 
+///Before 
+const speak1 = function(){
+  console.log("Mehrab");
+  console.log("Hossain");
+}
+
+///Now 
+const speak2 = () => {
+  console.log("Mehrab");
+  console.log("Hossain");
+}
+
+
+///Before
+function isEven(num){
+  return num % 2 === 0;
+}
+
+///Now 
+let  isEven = (num) => {
+  return num % 2 === 0;
+}
+
+/// Or 
+isEven = (num) => num % 2 === 0;
+
+///Or
+isEven = num => num % 2 === 0;
+
+
+
+//Three dots (...) in Js Functions
+
+
+
