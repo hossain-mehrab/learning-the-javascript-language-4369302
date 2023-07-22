@@ -135,3 +135,62 @@ function transmogrifier1Copy(calvinNew){
 }
 
 //Functions are object in JS
+function speakSomething(what = 'Speaking!') {
+  for (var i = 0; i < 10; i += 1) {
+    console.log(what);
+  }
+}
+
+var speakSomething = function(what = 'Speaking!') {
+  for (var i = 0; i < 10; i += 1) {
+    console.log(what);
+  }
+};
+
+setTimeout(speakSomething, 5000);
+
+var obj = {
+  sayHello: function() {
+    console.log("Hello");
+  }
+};
+
+obj.sayHello();
+
+//Scope in JS: Where variable is decleared and local and global var
+if (!global && typeof window !== 'undefined') {
+  var global = window;
+}
+
+var myNum = 32;
+var myResult = "Success!";
+
+function randomizer(limit) {
+  var randomNumber = Math.floor(Math.random() * limit);
+
+  var myNum = randomNumber;
+
+  console.log("Local myNum is", myNum);
+  console.log("Global myNum is", global.myNum);
+
+  console.log("Our result is", myResult);
+
+  return myNum;
+}
+
+randomizer(10);
+
+function doubleIt(num) {
+  var myNum = num * 2;
+
+  return myNum;
+}
+
+if (1 === 1) {
+  const oneIsOne = 'Yes indeed.';
+  console.log('One is one, right?', oneIsOne);
+}
+
+console.log('One is still one, right?', oneIsOne); // ReferenceError
+
+//Arrow Functions 
